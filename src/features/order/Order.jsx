@@ -8,6 +8,7 @@ import {
   formatDate,
 } from '../../utils/helpers';
 import { useEffect } from 'react';
+import UpdateOrder from './UpdateOrder';
 
 function Order() {
   const order = useLoaderData();
@@ -122,6 +123,8 @@ function Order() {
                 </span>
               </div>
             </div>
+
+            {!priority && <UpdateOrder order={order} />}
           </div>
         </div>
       </div>
